@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Печенье Судьбы</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             display: flex;
             justify-content: center;
@@ -21,7 +25,7 @@
             background: #ffffff;
             border-radius: 12px;
             padding: 20px 24px 24px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
             border: 1px solid #e8eaed;
         }
         .header {
@@ -73,20 +77,19 @@
             height: 100%;
             border-radius: 50%;
             background: radial-gradient(ellipse at 30% 30%, #f7d98a, #d4a843 60%, #b3862e 100%);
-            box-shadow: inset 0 -8px 20px rgba(0,0,0,0.2), 0 8px 30px rgba(0,0,0,0.15);
-            border: 2px solid rgba(255,215,0,0.2);
+            box-shadow: inset 0 -8px 20px rgba(0, 0, 0, 0.2), 0 8px 30px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 215, 0, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 14px;
             font-weight: 700;
-            color: rgba(80,50,20,0.6);
+            color: rgba(80, 50, 20, 0.6);
             text-transform: uppercase;
             letter-spacing: 2px;
             backface-visibility: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(0,0,0,0.05) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
             transition: opacity 0.5s ease;
         }
         .cookie-whole::before,
@@ -117,13 +120,13 @@
             top: 0;
             backface-visibility: hidden;
             background: radial-gradient(ellipse at 30% 30%, #f7d98a, #d4a843 60%, #b3862e 100%);
-            box-shadow: inset -4px 0 12px rgba(0,0,0,0.1);
-            border: 2px solid rgba(255,215,0,0.15);
+            box-shadow: inset -4px 0 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 10px;
-            color: rgba(80,50,20,0.3);
+            color: rgba(80, 50, 20, 0.3);
             transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
             opacity: 0;
             transform: rotateY(0deg) scale(0.8);
@@ -133,28 +136,26 @@
             left: 0;
             border-radius: 100% 0 0 100% / 50% 0 0 50%;
             transform-origin: right center;
-            background-image: 
-                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(0,0,0,0.05) 0%, transparent 40%);
+            background-image: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 40%);
         }
         .half-right {
             right: 0;
             border-radius: 0 100% 100% 0 / 0 50% 50% 0;
             transform-origin: left center;
-            background-image: 
-                radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0,0,0,0.05) 0%, transparent 40%);
+            background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 40%);
         }
         .half-inner {
             width: 80%;
             height: 80%;
             border-radius: 50%;
-            background: radial-gradient(circle at center, rgba(255,215,0,0.05), transparent);
+            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.05), transparent);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            color: rgba(80,50,20,0.2);
+            color: rgba(80, 50, 20, 0.2);
         }
         .cookie.broken .cookie-whole {
             opacity: 0;
@@ -244,7 +245,7 @@
         .btn-primary:hover:not(:disabled) {
             background: #c4a032;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(212,175,55,0.2);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
         }
         .btn-primary:disabled {
             opacity: 0.35;
@@ -272,191 +273,205 @@
             color: #d4af37;
         }
         @media (max-width: 520px) {
-            .widget { padding: 16px 14px 20px; }
-            .cookie-container { width: 140px; height: 140px; }
-            .fortune-text { font-size: 15px; }
-            .btn { padding: 8px 18px; font-size: 12px; }
+            .widget {
+                padding: 16px 14px 20px;
+            }
+            .cookie-container {
+                width: 140px;
+                height: 140px;
+            }
+            .fortune-text {
+                font-size: 15px;
+            }
+            .btn {
+                padding: 8px 18px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
-<div class="widget" id="app">
-    <div class="header">
-        <div class="header-icon">🍪</div>
-        <div>
-            <div class="header-title">Печенье Судьбы</div>
-            <div class="header-sub">Разломайте и узнайте свой день</div>
+    <div class="widget" id="app">
+        <div class="header">
+            <div class="header-icon">🍪</div>
+            <div>
+                <div class="header-title">Печенье Судьбы</div>
+                <div class="header-sub">Разломайте и узнайте свой день</div>
+            </div>
         </div>
-    </div>
 
-    <div class="cookie-container" id="cookieContainer">
-        <div class="cookie" id="cookie">
-            <div class="cookie-whole">🍪</div>
-            <div class="half half-left"><div class="half-inner">⭐</div></div>
-            <div class="half half-right"><div class="half-inner">⭐</div></div>
+        <div class="cookie-container" id="cookieContainer">
+            <div class="cookie" id="cookie">
+                <div class="cookie-whole">🍪</div>
+                <div class="half half-left"><div class="half-inner">⭐</div></div>
+                <div class="half half-right"><div class="half-inner">⭐</div></div>
+            </div>
         </div>
-    </div>
 
-    <div class="fortune-container" id="fortuneContainer">
-        <div class="fortune-card">
-            <div class="fortune-badge" id="fortuneBadge">● Готово</div>
-            <div class="fortune-text" id="fortuneText">Нажмите на печенье</div>
+        <div class="fortune-container" id="fortuneContainer">
+            <div class="fortune-card">
+                <div class="fortune-badge" id="fortuneBadge">● Готово</div>
+                <div class="fortune-text" id="fortuneText">Нажмите на печенье</div>
+            </div>
         </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" id="tossBtn">🍪 Разломать</button>
+            <button class="btn btn-secondary" id="resetBtn">↺ Сбросить</button>
+        </div>
+
+        <div class="status" id="status">● Готово к броску</div>
     </div>
 
-    <div class="actions">
-        <button class="btn btn-primary" id="tossBtn">🍪 Разломать</button>
-        <button class="btn btn-secondary" id="resetBtn">↺ Сбросить</button>
-    </div>
+    <script>
+        // ===== ПРЕДСКАЗАНИЯ =====
+        const FORTUNES = [
+            'Сегодня ваш день — действуйте смело',
+            'Удача любит смелых, вы — её фаворит',
+            'Кофеин сегодня будет особенно эффективен',
+            'Ваша интуиция не подведет',
+            'Звезды складываются в вашу пользу',
+            'Маленький шаг сегодня — большой рывок завтра',
+            'Улыбнитесь — это улучшит ваши показатели',
+            'Вы на правильном пути, продолжайте',
+            'Хорошие новости уже в пути',
+            'Ваш энтузиазм заразителен'
+        ];
 
-    <div class="status" id="status">● Готово к броску</div>
-</div>
+        let isAnimating = false;
+        let isLocked = false;
 
-<script>
-    // ===== ПРЕДСКАЗАНИЯ (общие) =====
-    const FORTUNES = [
-        'Сегодня ваш день — действуйте смело',
-        'Удача любит смелых, вы — её фаворит',
-        'Кофеин сегодня будет особенно эффективен',
-        'Ваша интуиция не подведет',
-        'Звезды складываются в вашу пользу',
-        'Маленький шаг сегодня — большой рывок завтра',
-        'Улыбнитесь — это улучшит ваши показатели',
-        'Вы на правильном пути, продолжайте',
-        'Хорошие новости уже в пути',
-        'Ваш энтузиазм заразителен'
-    ];
+        const cookie = document.getElementById('cookie');
+        const container = document.getElementById('cookieContainer');
+        const fortuneContainer = document.getElementById('fortuneContainer');
+        const fortuneBadge = document.getElementById('fortuneBadge');
+        const fortuneText = document.getElementById('fortuneText');
+        const status = document.getElementById('status');
+        const tossBtn = document.getElementById('tossBtn');
+        const resetBtn = document.getElementById('resetBtn');
 
-    // ===== СОСТОЯНИЕ =====
-    let isAnimating = false;
-    let isLocked = false;
-
-    // ===== DOM =====
-    const cookie = document.getElementById('cookie');
-    const container = document.getElementById('cookieContainer');
-    const fortuneContainer = document.getElementById('fortuneContainer');
-    const fortuneBadge = document.getElementById('fortuneBadge');
-    const fortuneText = document.getElementById('fortuneText');
-    const status = document.getElementById('status');
-    const tossBtn = document.getElementById('tossBtn');
-    const resetBtn = document.getElementById('resetBtn');
-
-    // ===== ВСПОМОГАТЕЛЬНЫЕ =====
-    function getTodayKey() {
-        const d = new Date();
-        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-    }
-    function getStorageKey() {
-        return 'cookie_fortune_' + getTodayKey();
-    }
-    function shuffle(arr) {
-        const a = arr.slice();
-        for (let i = a.length-1; i>0; i--) {
-            const j = Math.floor(Math.random()*(i+1));
-            [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a;
-    }
-    function getFortune() {
-        const shuffled = shuffle(FORTUNES);
-        return shuffled[0] || 'Сегодня будет хороший день';
-    }
-    function loadCached() {
-        try {
-            const data = localStorage.getItem(getStorageKey());
-            return data ? JSON.parse(data) : null;
-        } catch { return null; }
-    }
-    function saveCached(fortune) {
-        localStorage.setItem(getStorageKey(), JSON.stringify(fortune));
-    }
-    function clearCached() {
-        localStorage.removeItem(getStorageKey());
-    }
-
-    function displayFortune(text, cached) {
-        fortuneBadge.textContent = '🍪 Судьба';
-        fortuneText.textContent = text;
-        fortuneContainer.classList.add('show');
-        status.textContent = cached ? '📌 Предсказание на сегодня (кеш)' : '✨ Предсказание выпало!';
-        status.className = 'status active';
-        tossBtn.disabled = true;
-        isLocked = true;
-    }
-
-    function resetCookie() {
-        cookie.classList.remove('broken');
-        cookie.style.transition = 'transform 0.5s ease';
-        cookie.style.transform = 'rotateY(0deg)';
-        setTimeout(() => cookie.style.transition = '', 500);
-        fortuneContainer.classList.remove('show');
-    }
-
-    function breakCookie() {
-        if (isAnimating) return;
-        if (isLocked) {
-            status.textContent = '⏳ Сегодня вы уже ломали. Завтра!';
-            return;
-        }
-        const cached = loadCached();
-        if (cached) {
-            displayFortune(cached, true);
-            return;
+        function getTodayKey() {
+            const d = new Date();
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate())
+            .padStart(2, '0');
         }
 
-        isAnimating = true;
-        tossBtn.disabled = true;
-        status.textContent = '🔄 Печенье ломается...';
-        status.className = 'status';
-        fortuneContainer.classList.remove('show');
+        function getStorageKey() {
+            return 'cookie_fortune_' + getTodayKey();
+        }
 
-        cookie.classList.remove('broken');
-        void cookie.offsetWidth;
-        cookie.classList.add('broken');
+        function shuffle(arr) {
+            const a = arr.slice();
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
 
-        const fortune = getFortune();
-        saveCached(fortune);
+        function getFortune() {
+            const shuffled = shuffle(FORTUNES);
+            return shuffled[0] || 'Сегодня будет хороший день';
+        }
 
-        setTimeout(() => {
-            displayFortune(fortune, false);
-            isAnimating = false;
+        function loadCached() {
+            try {
+                const data = localStorage.getItem(getStorageKey());
+                return data ? JSON.parse(data) : null;
+            } catch {
+                return null;
+            }
+        }
+
+        function saveCached(fortune) {
+            localStorage.setItem(getStorageKey(), JSON.stringify(fortune));
+        }
+
+        function clearCached() {
+            localStorage.removeItem(getStorageKey());
+        }
+
+        function displayFortune(text, cached) {
+            fortuneBadge.textContent = '🍪 Судьба';
+            fortuneText.textContent = text;
+            fortuneContainer.classList.add('show');
+            status.textContent = cached ? '📌 Предсказание на сегодня (кеш)' : '✨ Предсказание выпало!';
+            status.className = 'status active';
             tossBtn.disabled = true;
             isLocked = true;
-        }, 900);
-    }
+        }
 
-    function resetAll() {
-        clearCached();
-        isLocked = false;
-        isAnimating = false;
-        tossBtn.disabled = false;
-        resetCookie();
-        status.textContent = '♻️ Кеш сброшен. Ломайте снова';
-        status.className = 'status';
-    }
+        function resetCookie() {
+            cookie.classList.remove('broken');
+            cookie.style.transition = 'transform 0.5s ease';
+            cookie.style.transform = 'rotateY(0deg)';
+            setTimeout(() => cookie.style.transition = '', 500);
+            fortuneContainer.classList.remove('show');
+        }
 
-    function checkToday() {
-        const cached = loadCached();
-        if (cached) {
-            displayFortune(cached, true);
+        function breakCookie() {
+            if (isAnimating) return;
+            if (isLocked) {
+                status.textContent = '⏳ Сегодня вы уже ломали. Завтра!';
+                return;
+            }
+            const cached = loadCached();
+            if (cached) {
+                displayFortune(cached, true);
+                return;
+            }
+
+            isAnimating = true;
             tossBtn.disabled = true;
-            isLocked = true;
-        } else {
-            status.textContent = '● Готово к броску';
+            status.textContent = '🔄 Печенье ломается...';
             status.className = 'status';
-            tossBtn.disabled = false;
-            isLocked = false;
-            resetCookie();
+            fortuneContainer.classList.remove('show');
+
+            cookie.classList.remove('broken');
+            void cookie.offsetWidth;
+            cookie.classList.add('broken');
+
+            const fortune = getFortune();
+            saveCached(fortune);
+
+            setTimeout(() => {
+                displayFortune(fortune, false);
+                isAnimating = false;
+                tossBtn.disabled = true;
+                isLocked = true;
+            }, 900);
         }
-    }
 
-    // ===== СОБЫТИЯ =====
-    container.addEventListener('click', breakCookie);
-    tossBtn.addEventListener('click', breakCookie);
-    resetBtn.addEventListener('click', resetAll);
+        function resetAll() {
+            clearCached();
+            isLocked = false;
+            isAnimating = false;
+            tossBtn.disabled = false;
+            resetCookie();
+            status.textContent = '♻️ Кеш сброшен. Ломайте снова';
+            status.className = 'status';
+        }
 
-    // ===== СТАРТ =====
-    checkToday();
-</script>
+        function checkToday() {
+            const cached = loadCached();
+            if (cached) {
+                displayFortune(cached, true);
+                tossBtn.disabled = true;
+                isLocked = true;
+            } else {
+                status.textContent = '● Готово к броску';
+                status.className = 'status';
+                tossBtn.disabled = false;
+                isLocked = false;
+                resetCookie();
+            }
+        }
+
+        container.addEventListener('click', breakCookie);
+        tossBtn.addEventListener('click', breakCookie);
+        resetBtn.addEventListener('click', resetAll);
+
+        checkToday();
+    </script>
 </body>
 </html>
